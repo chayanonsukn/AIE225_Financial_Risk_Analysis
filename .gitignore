@@ -1,0 +1,12 @@
+# System Files
+.DS_Store
+
+# Temporary / Large Course Materials
+Knowleage/
+temp_knowledge/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Python Cache
+__pycache__/
