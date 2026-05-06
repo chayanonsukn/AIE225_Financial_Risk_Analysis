@@ -75,8 +75,8 @@
 
 **Slide 12: Training & Evaluation (ผลการสอบของ AI)**
 - **เนื้อหา:** ตารางเปรียบเทียบ Accuracy, Classification Report และ Confusion Matrix ของทั้งสองโมเดล
-- **ผลลัพธ์สำคัญ:** Logistic Regression ทำนายได้ **80%** (ด้วย C=0.001, class_weight='balanced', StandardScaler) / KNN ทำนายได้ **73%**
-- **อธิบายผลลัพธ์:** เราเลือก Logistic Regression มาใช้จริงเพราะแม่นยำกว่าและอธิบายเหตุผลได้ดีกว่า
+- **ผลลัพธ์สำคัญ:** Logistic Regression ทำนายได้ **80%** (ด้วย C=0.001, class_weight='balanced', StandardScaler) / KNN (หลัง tune ค่า k ที่ดีที่สุด) ทำนายได้ **80%** เช่นกัน
+- **อธิบายผลลัพธ์:** แม้ทั้งสองโมเดลจะมี Accuracy เท่ากันที่ 80% แต่เราเลือก Logistic Regression มาใช้จริง เพราะสามารถอธิบายได้ว่าปัจจัยไหนส่งผลต่อความเสี่ยงมากที่สุด (Interpretability) ซึ่ง KNN ทำไม่ได้
 
 ---
 

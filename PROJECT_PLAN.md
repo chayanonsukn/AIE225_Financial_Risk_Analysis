@@ -32,12 +32,13 @@
 *เป้าหมาย: สร้างปัญญาประดิษฐ์ที่จดจำพฤติกรรมความเสี่ยง*
 1.  **Model Selection:**
     *   **Logistic Regression:** เพื่อดูความน่าจะเป็นและน้ำหนักปัจจัยของความเสี่ยง (Interpretability)
-    *   **KNN (K-Nearest Neighbors):** เพื่อจำแนกกลุ่มตามความคล้ายคลึงของพฤติกรรม (Baseline Comparison)
+    *   **KNN (K-Nearest Neighbors):** เพื่อจำแนกกลุ่มตามความคล้ายคลึงของพฤติกรรม (Baseline Comparison) โดยหาค่า k ที่เหมาะสมที่สุดจากช่วง 1-20
 2.  **Training & Evaluation:**
     *   แบ่งชุดข้อมูลเป็น Training Set (80%) และ Testing Set (20%)
     *   ใช้ StandardScaler ปรับสเกลข้อมูลให้สมดุลก่อนฝึกสอน
-    *   ปรับจูน Hyperparameter: Logistic Regression ใช้ C=0.001, class_weight='balanced' เพื่อให้โมเดลไม่ลำเอียงและไม่ Overfitting
+    *   ปรับจูน Hyperparameter: Logistic Regression ใช้ C=0.001, class_weight='balanced' เพื่อให้โมเดลไม่ลำเอียงและไม่ Overfitting / KNN ทดลองค่า k ตั้งแต่ 1-20 เพื่อหาค่าที่เหมาะสมที่สุด
     *   ฝึกสอนและประเมินประสิทธิภาพของทั้งสองโมเดลด้วย Accuracy, Classification Report และ Confusion Matrix
+    *   เลือกโมเดลหลัก (Model Selection): แม้ทั้งสองโมเดลจะมี Accuracy เท่ากันที่ 80% แต่เลือก Logistic Regression เป็นโมเดลหลัก เพราะสามารถอธิบายน้ำหนักปัจจัย (Interpretability) ได้ ซึ่งตอบโจทย์ทางธุรกิจ
 
 ### Phase 4: การนำไปใช้และสรุปผล (Deployment & Recommendations)
 1. **Strategic Insights:** สรุปปัจจัยที่มีผลต่อความเสี่ยงมากที่สุด (Feature Importance) โดยวิเคราะห์จากค่าน้ำหนัก (Coefficients) ของ Logistic Regression
